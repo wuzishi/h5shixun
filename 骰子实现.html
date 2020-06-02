@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>骰子转动</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .parent{
+            width: 100px;
+            height: 100px;
+            background-color: darkgray;
+        }
+        .son{
+            width: 100%;
+            height: 33.33%;
+            display: flex;
+            justify-content: space-between;
+
+        }
+     
+        .s2{
+            /* background-color: green; */
+            align-items: center;
+        }
+        .s3{
+            /* background-color: blue; */
+            align-items: flex-end;
+        }
+        .child{
+            width: 28%;
+            height: 90%;
+           
+            border-radius: 50%;
+        }
+      .c1{
+          background-color: black;
+      }
+      button{
+          margin-left: 5px;
+          margin-right: 5px;
+      }
+      #start{
+          width: 40px;
+          height: 20px;
+          background-color: blanchedalmond;
+          
+      }
+      #stop{
+        width: 40px;
+          height: 20px;
+          background-color: blanchedalmond;
+      }
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <div class="son ">
+            <div class="child  "></div>
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+        <div class="son s2">
+            <div class="child "></div>
+            <div class="child "></div>
+            <div class="child "></div>
+        </div>
+        <div class="son s3">
+            <div class="child "></div>
+            <div class="child "></div>
+            <div class="child "></div>
+        </div>
+    </div>
+    <button id="start" value="转动">转动</button>
+    <button id="stop" value="转动">停止</button>
+
+    
+</body>
+
+
+<script type="text/javascript">
+      var start = document.getElementById("start");
+      var stop = document.getElementById("stop");
+      var sons = document.getElementsByClassName("son");
+      
+</script>
+</html>

@@ -4,8 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>弹性盒子</title>
+    <style>
+        .mydiv{
+            width: 700px;
+            height: 300px;
+            background-color: chocolate;
+            /* 将盒子转化成弹性盒子 */
+            display: flex;
+
+            /* 控制姓名是否换行 */
+            flex-wrap: wrap;
+ 
+            /* 控制项目在容器上的主轴 
+            
+              start 表示 左上对齐
+              center 表示居中对齐
+              space-around  表示等间距对齐
+
+            */
+            justify-content:flex-end;  
+
+
+            /* Align-item 控制项目在交叉轴上的对齐方式 
+            
+              Flex-start:zuo dui qi
+            */
+
+        }
+        .child{
+            width: 200px;
+            height: 200px;
+            background-color: cornflowerblue;
+            margin: 1px;
+        }
+    </style>
 </head>
+
+
 <body>
-    
+    <div class="mydiv">
+        <div class="child">姓名</div>
+        <div class="child">姓名</div>
+        <div class="child">姓名</div>
+    </div>
 </body>
 </html>
