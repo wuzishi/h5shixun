@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style-type:none ;
+}
+#lbt{
+    width: 600px;
+    height: 470px;
+    overflow: hidden;
+    font-size: 0px;
+    position: relative;
+    margin: 0px auto;
+    text-align: center;
+}
+
+#image>li{
+    
+    display: inline-block;
+}
+
+#point{
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+#point>li{
+    width: 10px;
+    height: 10px;
+    background-color: darkgray;
+    border-radius: 50%;
+    margin: 0px 2px;
+}

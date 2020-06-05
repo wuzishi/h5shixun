@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倒计时</title>
+    <style>
+         #djs{
+             margin: 0px auto;
+             text-align: center;
+             width: 100px;
+             height: 25px;
+             list-style-type: none;
+             /* box-sizing: border-box; */
+             font-size: 0px;
+         }
+         #djs>li{
+            display: inline-block;
+            width: 20px;
+            height: 100%;
+            background-color: red;
+            /* margin: 0px 2px; */
+            font-size: 14px;
+            color: blanchedalmond;
+         }
+         #djs>li.jg{
+             width: 16px;
+             background-color: blanchedalmond;
+             color:red;
+         }
+    </style>
+</head>
+<body>
+    <ul id="djs">
+        <li></li>
+        <li class="jg">:</li>
+        <li></li>
+        <li class="jg">:</li>
+        <li></li>
+    </ul>
+</body>
+<script src="./js/倒计时.js">
+
+</script>
+</html>

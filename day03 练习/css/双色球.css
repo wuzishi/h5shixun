@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.box{
+    list-style-type: none;
+    font-size: 0px;
+    margin: auto 0px;
+    text-align: center;
+
+}
+.box>li{
+    font-size: 14px;
+    display: inline-block;
+    color: red;
+    width: 20px;
+    height: 20px;
+    border: 2px red solid;
+    border-radius: 50%;
+    margin:3px;
+    text-align: center;
+    line-height: 20px;
+}
+.box>li.blue{
+    border-color: blue;
+    color: blue;
+}
+#run{
+    
+    background-color: brown;
+    color: cyan;
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin: 10px auto;
+    cursor: pointer;
+
+}
