@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<title></title>
+		<style>
+			.student{
+				width: 300px;
+				height: 42px;
+				text-align: 42px;background-color: #bf4ee4;font-size: 18px;font-family: "微软雅黑";
+			}
+			#btn{width: 120px;height: 42px;background-color: aquamarine;text-align: center;line-height: 42px;margin-top: 15px;cursor: pointer;color: #FFE4C4;}
+			
+		</style>
+	</head>	
+	<body>
+		<div class="student" id="student">一个		
+		</div>
+		<div id="btn">选取</div>
+		<script>
+            
+			function rand(min,max){
+				return min+Math.round(Math.random()*(max-min));
+			}
+			document.getElementById('btn').onclick = function(){
+				
+                var  student = [
+				{name:'张三',gener:'男'},
+				{name:'张三',gener:'男'},
+				{name:'王五',gener:'男'},
+				{name:'李四',gener:'男'},
+				{name:'王二',gener:'男'},
+				{name:'王武',gener:'男'},
+				{name:'张四',gener:'男'},
+				{name:'张二',gener:'男'},
+				];
+				var num=0;
+				
+				var sid=setInterval(function(){
+					var ind=rand(0,student.length-1);
+					var name=student[ind].name;
+					document.getElementById('student').innerHTML=name;
+					num++;
+                    console.log(num);
+					(num == 5) && clearInterval(sid);
+					},199);
+				
+			}
+            
+		</script>
+	</body>
+</html>

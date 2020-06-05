@@ -75,7 +75,7 @@
             <div class="child "></div>
         </div>
     </div>
-    <button id="start" value="转动">转动</button>
+    <button id="start" value="转动" >转动</button>
     <button id="stop" value="转动">停止</button>
 
     
@@ -84,8 +84,81 @@
 
 <script type="text/javascript">
       var start = document.getElementById("start");
-      var stop = document.getElementById("stop");
+    //   var stop = document.getElementById("stop");
+    var stop1 = document.getElementById("stop");
       var sons = document.getElementsByClassName("son");
+
+    //   while(true){
+
+    //   }
+    var s = 0
+      start.onclick = function(){
+           s = setInterval(randrun,100);
+          
+        // s = setTimeout(function(){console.log(1)},1000);
+      }
+      stop1.onclick = function(){
+          clearInterval(s);
+      }
+      function randrun(){
+          var randnum = (Math.round(Math.random()*100)%6)+1;
+        // console.log(randnum);
+        clearup();
+        switch(randnum){
+            case 1:
+              one();break;
+            case 2:
+              two();break;
+            case 3:
+               three();break;
+            case 4:
+               four();break;
+            case 5:
+               five();break;
+            case 6:
+               six();break;
+        }
+        
+      }
+      
+      function one(){
+          sons[1].getElementsByClassName("child")[1].setAttribute("class"," child c1");
+      }
+      function two(){
+          sons[0].getElementsByClassName("child")[0].setAttribute("class"," child c1");
+          sons[2].getElementsByClassName("child")[2].setAttribute("class"," child c1");
+      }
+      function three(){
+          one();
+          two();
+      }
+      function four(){
+        sons[0].getElementsByClassName("child")[0].setAttribute("class"," child c1");
+        sons[0].getElementsByClassName("child")[2].setAttribute("class"," child c1");
+        sons[2].getElementsByClassName("child")[0].setAttribute("class"," child c1");
+        sons[2].getElementsByClassName("child")[2].setAttribute("class"," child c1");
+      }
+
+      function five(){
+          one();
+          four();
+      }
+      function six(){
+        sons[1].getElementsByClassName("child")[0].setAttribute("class"," child c1");
+        sons[1].getElementsByClassName("child")[2].setAttribute("class"," child c1");
+        four();
+      }
+
+      function clearup(){
+          for(var i=0;i<3;i++){
+              var childcs = sons[i].getElementsByClassName("child");
+              for(var j=0; j<childcs.length;j++){
+                if(childcs[j].classList.contains("c1")){
+                       childcs[j].setAttribute("class","child");
+                }
+              }
+          }
+      }
       
 </script>
 </html>

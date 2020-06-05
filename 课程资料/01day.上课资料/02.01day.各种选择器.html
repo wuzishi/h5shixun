@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器</title>
+    <style>
+        .mydiv{
+            width: 200px;
+            height: 200px;
+            background-color: #f01;
+            border-radius: 50%;
+        }
+        #mydiv{
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            background-color: blue;
+        }
+        .myp, .myp ~ p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+        <div class="mydiv"></div>
+        <div id="mydiv"> </div>
+
+        <p class="myp">
+            我的段落
+        </p>
+        <p>
+            我的样式
+        </p>
+        <p>我是二师兄</p>
+
+</body>
+</html>

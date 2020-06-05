@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三院导航</title>
+    <style>
+
+        .mydiv{
+            width: 800px;
+            height: 300px;
+            background-color: chocolate;
+            /* 把盒子转换成弹性盒子 */
+            display: flex;
+            /* flex-direction: column; */
+            /* 控制项目是否换行 */
+            /* flex-wrap:wrap; */
+            /* 控制项目在容器上的主轴方向上的对齐方式 */
+            justify-content: space-evenly;
+            /* 控制项目在垂直方向上的对齐方式 */
+            align-items: center;
+        }
+        .child{
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+            margin: 1px;
+            flex-grow: 0;
+        }
+        .c2{
+            flex-grow: 1;
+            flex-shrink: 0;
+            align-self: flex-start;
+        }
+        .c3{
+            flex-grow: 2;
+            flex-shrink: 0;
+            align-self: flex-end;
+        }
+    </style>
+    
+</head>
+<body>
+       <div class="mydiv">
+            <div class="child">项目1</div>
+            <div class="child c2">项目2</div>
+            <div class="child c3">项目3</div>
+            <div class="child">项目3</div>
+            <div class="child">项目3</div>
+       </div>
+
+</body>
+</html>

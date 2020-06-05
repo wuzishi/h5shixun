@@ -1,0 +1,26 @@
+*{margin: 0; padding: 0;}
+
+.menu{
+    width: 1280px;
+    height: 42px;
+    background-color: #a1251b;
+    /* 让盒子在父级盒子里面水平方向居中，不是盒子里面的文字，是盒子自己在水平方向居中 */
+    margin: 0 auto;
+    /* 清除空格的骚操作 */
+    font-size: 0;
+}
+
+.menu>li{
+    font-size: 16px;
+    display: inline-block;
+    width: 123px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    color: #fff;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.menu>li:hover{
+    background-color: #700005;
+}

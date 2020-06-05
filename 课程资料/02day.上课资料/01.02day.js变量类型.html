@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量类型</title>
+</head>
+
+<body>
+    <script>
+        var a = [1, 2, 3];//0f00ax3
+        console.log(typeof a);
+
+        var b = a;
+        a[1] = '何健';
+        console.log(b);//[1,2,3]
+
+        // 基础类型
+        var m = 100;
+        var n = m;
+        m = 200;
+        console.log(n);
+        console.log(m);
+
+        const num = { a: 1 };
+        num.a = 600;
+        console.log(num);
+
+
+        // 声明对象
+        var obj = { name: '任义杰', age: 20, gender: '男' };
+        console.log(obj.name, obj.age);
+
+        // JSON不是很常用，是必用
+        var json = [
+            { name: '任义杰', age: 20, gender: '男' },
+            { name: '陈旭', age: 20, gender: '男' },
+            {
+                name: '王星云', age: 21, gender: '帅哥', score: [
+                    {
+                        com: 89, math: 63, english: [
+                            { g1: 58 },
+                            { g2: 50 },
+                            { g3: 60 }
+                        ]
+                    }
+                ]
+            }
+        ];
+        console.log(json[2].score[0].english[1].g2);
+        console.log(json[1]['name']);
+        var n = 'name';
+        console.log(json[1][n]);
+    </script>
+</body>
+
+</html>

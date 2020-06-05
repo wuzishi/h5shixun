@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var a = 10;
+    var b = [10];
+    var c = a;
+    var d = b;
+    a = 11;
+    b=12;
+    console.log(a,b,c,d);
+
+    var arr = [1,2,3,4,5];
+    arr.shift();
+    arr.unshift(10);
+    console.log(arr[0]);
+
+    arr.push(10,11,12)
+    console.log(arr)
+    arr.pop();
+    console.log(arr);
+    arr.splice(3,0,90,80,70);
+    console.log(arr);
+
+
+    function Person(){
+        this.name = "wusan",
+        this.age = 10;
+        this.do = function(){
+            console.log(name+"吃东西");
+        }
+    }
+    fu = new Person();
+    console.log(fu);
+</script>
+</html>

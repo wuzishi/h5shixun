@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数</title>
+</head>
+
+<body>
+    <script>
+        // 构造函数，是抽象的
+        function Person(name){
+            this.name = name;
+        }
+        var p1 = new Person('付子艺');
+        console.log(p1);
+
+        var p2 = new Person('鲁老师');
+        console.log(p2);
+        // Math 就是一个实例化的对象，不需要new
+        console.log(Math.random());//[0,1)
+        // 10,  33   23*0.999999999=  23
+        function random(min, max){
+            return min + Math.round((max-min)*Math.random());
+        }
+        console.log(random(10, 33));
+        // 向上取整
+        var a = 10.000001;
+        console.log(Math.ceil(a));
+        var b = 9.999999999999;
+        console.log(Math.floor(b));
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机抽取学生</title>
+    <style>
+        .student{
+            width: 300px;
+            height: 42px;
+            text-align: center;
+            line-height: 42px;
+            background-color: #eee;
+            font-size: 18px;
+            font-family: 微软雅黑;
+        }
+        .btn{
+            width: 120px;
+            height: 42px;
+            background-color: chocolate;
+            text-align: center;
+            line-height: 42px;
+            margin-top: 15px;
+            cursor: pointer;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="student" id="student">
+        一个伟大的工程师将会出现在这里...
+    </div>
+
+    <div class="btn" id="btn">开始抽选</div>
+
+
+    <script>
+        function rand(min, max){
+            return min + Math.round(Math.random()*(max-min));
+        }
+        // 随机一个名字 显示在指定位置
+        document.getElementById('btn').onclick = function(){
+            var students = [
+                {name:'孙汉利',gender:'女', age:18},
+                {name:'何好',gender:'女', age:18},
+                {name:'蒋伟明',gender:'男', age:18},
+                {name:'毛业林',gender:'男', age:18},
+                {name:'康文明',gender:'男', age:18}
+            ];
+            var num = 0;
+            var sid = setInterval(function(){
+                var ind = rand(0, students.length-1);
+                var name = students[ind].name;
+                // 修改内容
+                document.getElementById('student').innerHTML = name;
+                num++;
+                console.log(num);
+                // 执行5次
+                (num == 5) && clearInterval(sid);
+            }, 103);
+            
+        }
+    </script>
+</body>
+</html>
