@@ -15,7 +15,7 @@ class Round{
         document.querySelector(Selector).onmouseout = function(){
             // console.log(_this.sid);
             if(_this.sid){
-                _this.autoplay(1000);
+                _this.autoplay();
             }
         }
     }
